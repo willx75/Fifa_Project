@@ -21,10 +21,9 @@ def fusion_file(list_path: List[str], new_filepath: str):
     final_df.to_csv(new_filepath)
 
 
-def compute_remaining_contract_years(df: pd.DataFrame, year: int = None):
+def compute_remaining_contract_years(df: pd.DataFrame):
 
-    year = year or df["years"]
-    df["contract_remaining_year"] = (df["contract_valid_until"] - year).clip(0).fillna(0)
+    df["contract_remaining_year"] = (df["contract_valid_until"] - df["year"]).clip(0).fillna(0)
     return df
 
 
