@@ -1,0 +1,1 @@
+Using a dataset from kaggle and some famous python libraries, fifa_project wants to allow you to know the outcome of a fifa player salaries.

@@ -160,22 +160,22 @@ def plot_max_depth_evolution(year, min_depth=1, max_depth=50, model="decision_tr
     plt.show()
 
 
-# plot_price_histogram(20)
+    plot_price_histogram(20)
 #
 # To train decision tree on 2020 dataset
-#
-# pipeline, train_score, test_score, X_test, Y_test = train_model_on_dataset(
+
+#pipeline, train_score, test_score, X_test, Y_test = train_model_on_dataset(
 #    20, model="decision_tree", show_importance=True, max_depth=15)
 #print("Training :", train_score)
 #print("Validation :", test_score)
-# plot_relative_error(pipeline, 19)  # Use this on a dataset different from training
+#plot_relative_error(pipeline, 19)  # Use this on a dataset different from training
 #plot_relative_error_on_test(pipeline, X_test, Y_test)
-# plot_max_depth_evolution(20)
+plot_max_depth_evolution(20)
 
 # To train random forest on 2020 dataset
 
 pipeline, train_score, test_score, X_test, Y_test = train_model_on_dataset(
-    20, model="random_forest", show_importance=True, max_depth=15, n_estimators=100)
+   20, model="random_forest", show_importance=True, max_depth=15, n_estimators=100)
 print("Training :", train_score)
 print("Validation :", test_score)
 plot_relative_error(pipeline, 19)
